@@ -4,7 +4,7 @@ const instance = axios.create({
   baseURL: 'https://jsonplaceholder.typicode.com'
 });
 
-instance.headers.common['Authorization'] = 'AUTH TOKEN VERSION 2
+instance.headers.common['Authorization'] = 'AUTH TOKEN VERSION 2';
 
 instance.interceptors.request.use(request => {
   console.log(request);
@@ -16,7 +16,7 @@ instance.interceptors.request.use(request => {
 
 instance.interceptors.response.use(response => {
   console.log(response);
-  return request;
+  return response;
 }, error => {
   console.log(error);
   return Promise.reject(error);
