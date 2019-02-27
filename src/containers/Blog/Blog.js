@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from '../../axios';
 import './Blog.css';
 import Posts from '../Posts/Posts';
-import { Route } from 'react-router-dom';
+import NewPost from '../NewPost/NewPost';
+import { Route, Link } from 'react-router-dom';
 
 class Blog extends Component {
     render () {
@@ -11,12 +12,15 @@ class Blog extends Component {
               <header>
                 <nav>
                   <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/new-post">Novo Post</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to={{
+                      pathname: '/new-post'
+                    }}>Novo Post</Link></li>
                   </ul>
                 </nav>
               </header>
               <Route path="/" exact component={Posts}/>
+              <Route path="/new-post" exact component={NewPost}/>
             </div>
         );
     }
