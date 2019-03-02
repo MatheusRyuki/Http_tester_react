@@ -6,7 +6,7 @@ import Blog from './containers/Blog/Blog';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/Http_tester_react">
         <div className="App">
           <Blog />
         </div>
