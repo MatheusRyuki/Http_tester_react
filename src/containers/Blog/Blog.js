@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './Blog.css';
 import Posts from '../Posts/Posts';
 import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
